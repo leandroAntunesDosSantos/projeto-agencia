@@ -11,6 +11,7 @@ public class Conexao {
     public static Connection conn;
 
     public static Connection getConexao() throws Exception {
+        //Class.forName("com.mysql.cj.jdbc.Driver");
         try {
             if (conn == null){
                 conn = DriverManager.getConnection(url,user,password);

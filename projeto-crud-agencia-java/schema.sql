@@ -18,4 +18,10 @@ create table passagens (
   preco int
 );
 
-
+create table viagens (
+  id int auto_increment primary key,
+  id_cliente int not null,
+  foreign key (id_cliente) references clientes(id),
+  id_passagem int not null,
+  foreign key (id_passagem) references passagens(id)
+ );
